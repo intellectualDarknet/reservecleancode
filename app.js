@@ -33,7 +33,8 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='main__task';
+    label.className='main__task main__label';
+    listItem.className='main__todo-list-item';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
@@ -123,9 +124,17 @@ var taskCompleted=function(){
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
+    console.log(listItem);
+    console.log(listItem.classList);
+    console.log(listItem.classList.contains('editMode'));
+    if(true) {
+        listItem.className='main__completed-list-item editMode';
+    }else {
+        listItem.className='main__completed-list-item';
+    }
+    console.log(listItem);
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
-
 }
 
 
@@ -135,6 +144,13 @@ var taskIncomplete=function(){
     //When the checkbox is unchecked
     //Append the task list item to the #incompleteTasks.
     var listItem=this.parentNode;
+    
+    if(true) {
+        listItem.className='main__todo-list-item editMode';
+    }else {
+         listItem.className='main__todo-list-item';
+    }
+
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
 }
