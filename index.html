@@ -14,51 +14,49 @@
   <main class="main" >
     <div class="main__content">
       <div class="main__add">
-        <p><label for="main__new-task">Add Item</label></p>
+        <p><label class="main__new-task-label" for="main__new-task">Add Item</label></p>
         <div class="main__add-container">
           <input id="main__new-task" class="main__new-task" type="text">
-          <button>Add</button>
+          <button class="button">Add</button>
         </div>
       </div>
       <div class="main__todo">
         <h3>Todo</h3>
         <ul class="main__todo-list">
           <li class="main__todo-list-item">
-            <input type="checkbox">
+            <input type="checkbox" class="main__checkbox">
             <label class="main__task main__label">Pay Bills</label>
             <input type="text" class="main__task main__input">
-            <button class="edit">Edit</button>
-            <button class="delete">
+            <button class="button button_edit">Edit</button>
+            <button class="button button_delete">
               <img class="main__eraser" src="./remove.svg" alt = "adjustment icon for text">
             </button>
           </li>
-          <li class="main__todo-list editMode">
-            <input type="checkbox">
+          <li class="main__todo-list-item editMode">
+            <input type="checkbox" class="main__checkbox">
             <label class="main__task main__label">Go Shopping</label>
             <input type="text" value="Go Shopping" class="main__task main__input">
-            <button class="edit">Save</button>
-            <button class="delete">
+            <button class="button button_edit">Save</button>
+            <button class="button button_delete">
               <img class="main__eraser" src="./remove.svg" alt = "adjustment icon for text">
             </button>
           </li>
         </ul>
       </div>
-
       <div class="main__completed">
         <h3>Completed</h3>
         <ul class="main__completed-list">
           <li class="main__completed-list-item">
-            <input type="checkbox" checked>
+            <input type="checkbox" class="main__checkbox" checked>
             <label class="main__task main__label">See the Doctor</label>
             <input type="text" class="main__task main__input">
-            <button class="edit">Edit</button>
-            <button class="delete">
+            <button class="button button_edit">Edit</button>
+            <button class="button button_delete">
               <img class="main__eraser" src="./remove.svg" alt = "adjustment icon for text">
             </button>
            </li>
         </ul>
       </div>
-    
     </div>
     <script src="app.js"></script>
   </main>
