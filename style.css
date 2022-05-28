@@ -53,7 +53,8 @@
 
 .main__todo-list-item,
 .main__completed-list-item,
-h3 {
+.main__todo-title,
+.main__completed-title {
   list-style: none;
 }
 
@@ -80,7 +81,8 @@ h3 {
 }
 
 /* Heading */
-h3,
+.main__todo-title,
+.main__completed-title,
 .main__new-task-label {
   color: #333;
   font-weight: 700;
