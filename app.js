@@ -11,7 +11,7 @@
 var taskInput=document.getElementById("main__new-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.querySelector(".main__todo-list");//ul of #incompleteTasks
-var completedTasksHolder=document.getElementById("main__completed-list");//completed-tasks
+var completedTasksHolder=document.querySelector(".main__completed-list");//completed-tasks
 console.log(incompleteTaskHolder);
 
 //New task list item
@@ -38,7 +38,7 @@ var createNewTaskElement=function(taskString){
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
-    editInput.className="main__task";
+    editInput.className="main__task main__input";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="edit";

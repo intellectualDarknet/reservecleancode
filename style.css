@@ -154,21 +154,23 @@ li >  input[type="text"] {
 }
 
 /* Completed */
-#main__completed-list .main__task {
+.main__completed-list .main__label {
   text-decoration: line-through;
   color: #888;
 }
 
-/* Edit Task */
-ul li input[type=text] {
+/* Edit Task ul li input[type=text]*/
+.main__input {
   display: none;
 }
 
-ul li.editMode input[type=text] {
+.main__completed-list .editMode .main__input,
+.main__todo-list .editMode .main__input {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+.main__completed-list .editMode .main__label,
+.main__todo-list .editMode .main__label {
   display: none;
 }
